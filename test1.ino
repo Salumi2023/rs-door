@@ -7,14 +7,13 @@
 #include <WiFiManager.h>
 
 #ifdef ESP8266
-#define RESET_PIN 2   // ESP-01 
+#define RESET_PIN 3   // ESP-01 Rx pin on esp8266 --> Tx pin on UART-USB
 #endif
 
 #ifdef ESP32
 #define RESET_PIN 5
 #endif
 
-#define RESET_PIN 5  // ESP12 (NodeMCU 0.9) = ESP8266 but with more pins
 
 unsigned long buttonPressTime = 0;  // Time the button has been pressed
 bool buttonPressed = false;  // Flag to detect whether the button is pressed
